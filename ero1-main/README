@@ -1,0 +1,26 @@
+Pré-requis:
+	package Python:
+        - osmnx
+        - networkx
+        - pyomo
+        - glpk
+		- collections
+		- matplotlib.pylot 
+
+Description de l’architecture:
+Dans le dossier vol_drone, le fichier trajet.py correspond au premier tour de boucle de notre recherche pour
+l’itinéraire du drone. Le fichier chinese_postman.py correspond au deuxième tour de boucle de notre recherche pour
+l'itinéraire du drone.
+Dans le dossier déneigeuse, - le fichier itineraire.py receuille les différentes fonctions permettant de calculer les itinéraires de toutes les deneigeuses d'un quartier.
+							- le fichier deneigeuse.py recueuille les fonctions pour trouver le bon nombre de deneigeuses type1 et type 2
+
+Commande pour executer le script de la démonstration:
+    Pour le vol du drone:
+        ./demonstration.sh drone [nom du quartier]
+    Le paramètre nom du quartier est soit "Outremont", soit "Montreal"
+	Le programme renvoie le cycle eulerien du drone et le nombre de kilomètres parcouru
+    Pour la déneigeuse:
+        ./demonstration.sh deneigeuse [nom du quartier]
+    Le paramètre nom du quartier est soit "Outremont", soit "Verdun", soit "SaintLéonard",
+    soit "Rivièredesprairiespointeauxtrembles", soit "PlateauMontRoyal"
+	Le programme renvoie une liste comportant pour chaque deneigeuse, le point départ et d'arrivée, les différents noeuds par lesquels elle va passer, le nombre de m parcouru et le type de deneigeuse. 
